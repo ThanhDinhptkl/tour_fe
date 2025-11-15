@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
-import hinh1 from "../assets/hinh1.png";
-
 function TourDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -13,6 +10,7 @@ function TourDetail() {
   useEffect(() => {
     const fetchTourDetail = async () => {
       try {
+        // api tour detail by id
         const response = await fetch(`http://localhost:3333/tour/${id}`);
         if (!response.ok) {
           throw new Error('Tour không tồn tại');
