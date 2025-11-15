@@ -20,6 +20,7 @@ function PaymentForm() {
 
     const fetchBookingDetails = async () => {
       try {
+        // api booking details by id 
         const response = await fetch(`http://localhost:5555/booking/${id}`, {
           headers: {
             'Authorization': `Bearer ${token}`
